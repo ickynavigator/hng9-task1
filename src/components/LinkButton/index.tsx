@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 interface BProps {
   id?: string;
   title: string;
-  url: string;
+  url?: string;
 }
 
 const LinkButton: React.FC<BProps> = ({ id, title, url }) => {
