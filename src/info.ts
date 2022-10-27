@@ -4,7 +4,7 @@ export const twitter = 'https://twitter.com/annetteblack';
 
 export const slackName = 'ObiFortune';
 
-export const githubLink = '';
+export const githubLink = 'https://github.com/ickynavigator/hng9-task1';
 
 export const profilePhoto = '/profile.png';
 
