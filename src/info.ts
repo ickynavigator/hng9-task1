@@ -4,6 +4,8 @@ export const twitter = 'https://twitter.com/annetteblack';
 
 export const slackName = 'ObiFortune';
 
+export const githubLink = '';
+
 export const profilePhoto = '/profile.png';
 
 export const constantLinks = [
