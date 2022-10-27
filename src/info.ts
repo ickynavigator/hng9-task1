@@ -1,4 +1,4 @@
-export const name = 'Annette Black';
+export const name = 'ObiFortune';
 
 export const twitter = 'https://twitter.com/annetteblack';
 
