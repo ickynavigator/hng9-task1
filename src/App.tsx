@@ -1,7 +1,11 @@
+import github from '@Assets/github.svg';
+import i4g from '@Assets/i4g.svg';
+import slack from '@Assets/slack.svg';
+import zuri from '@Assets/zuri.svg';
 import LinkButton from '@Comp/LinkButton';
 import ProfilePhoto from '@Comp/ProfilePhoto';
 import ShareButton from '@Comp/ShareButton';
-import { constantLinks, name, slackName, twitter } from './info';
+import { constantLinks, githubLink, name, slackName, twitter } from './info';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +25,21 @@ const App: React.FC = () => {
       {constantLinks.map(({ link, title, id }) => (
         <LinkButton key={id} id={id} title={title} url={link} />
       ))}
+
+      <div className="social__icons">
+        <img src={slack} />
+        <a href={githubLink}>
+          <img src={github} />
+        </a>
+      </div>
+
+      <hr />
+
+      <div className="footer">
+        <img src={zuri} />
+        <span>HNG Internship 9 Frontend Task</span>
+        <img src={i4g} />
+      </div>
     </div>
   );
 };
