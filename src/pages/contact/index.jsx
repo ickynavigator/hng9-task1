@@ -1,10 +1,10 @@
-import Footer from '@Comp/Footer';
 import { Button, Checkbox, Group, Stack, Text, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { name } from 'src/info';
+import Footer from '../../components/Footer';
+import { name } from '../../info';
 import styles from './index.module.scss';
 
-export const Contact: React.FC = () => {
+export const Contact = () => {
   const form = useForm({
     initialValues: {
       firstName: '',

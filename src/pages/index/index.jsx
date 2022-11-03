@@ -1,13 +1,12 @@
-import github from '@Assets/github.svg';
-import slack from '@Assets/slack.svg';
-import Footer from '@Comp/Footer';
-import { LinkButton, RouteButton } from '@Comp/LinkButton';
-import ProfilePhoto from '@Comp/ProfilePhoto';
-import ShareButton from '@Comp/ShareButton';
-import { githubLink } from 'src/info';
-import { constantLinks, name, slackName, twitter } from '../../info';
+import github from '../../assets/github.svg';
+import slack from '../../assets/slack.svg';
+import Footer from '../../components/Footer';
+import { LinkButton, RouteButton } from '../../components/LinkButton';
+import ProfilePhoto from '../../components/ProfilePhoto';
+import ShareButton from '../../components/ShareButton';
+import { constantLinks, githubLink, name, slackName, twitter } from '../../info';
 
-const Index: React.FC = () => {
+const Index = () => {
   return (
     <>
       <div className="profile">

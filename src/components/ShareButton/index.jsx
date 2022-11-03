@@ -1,20 +1,16 @@
 import { useEffect, useState } from 'react';
-
 import { RiMoreFill, RiShareForwardLine } from 'react-icons/ri';
-import useWindowSize from 'src/hooks/useWindowSize';
+import useWindowSize from '../../hooks/useWindowSize';
 import styles from './index.module.scss';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** This is the svg style */
-  image: 'share' | 'more';
-  // TODO: add tooltip
-  /** The tooltip text */
-  hoverText?: string;
-  /** Set this to false if you do not want the button to change based on size */
-  checkSize?: boolean;
-}
-
-const ShareButton: React.FC<Props> = ({ image, checkSize = true, ...props }) => {
+/**
+ * @param {{
+ *          image: 'share' | 'more',
+ *          hoverText?: string,
+ *          checkSize?: boolean
+ *        }} props
+ */
+const ShareButton = ({ image, checkSize = true, ...props }) => {
   const [currentImgType, setCurrentImgType] = useState(image);
   const size = useWindowSize();
 

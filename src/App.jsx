@@ -1,8 +1,8 @@
-import Contact from '@Pages/contact';
-import ErrorPage from '@Pages/Error';
-import Index from '@Pages/index';
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Contact from './pages/contact';
+import ErrorPage from './pages/Error';
+import Index from './pages/index';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="App">
       <RouterProvider router={router} />

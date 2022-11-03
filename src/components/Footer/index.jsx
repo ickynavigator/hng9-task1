@@ -1,7 +1,7 @@
-import i4g from '@Assets/i4g.svg';
-import zuri from '@Assets/zuri.svg';
+import i4g from '../../assets/i4g.svg';
+import zuri from '../../assets/zuri.svg';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <>
       <hr />
