@@ -17,8 +17,9 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
+      "@Assets/*": ["src/assets/*"],
       "@Comp/*": ["src/components/*"],
-      "@Assets/*": ["src/assets/*"]
+      "@Pages/*": ["src/pages/*"]
     }
   },
   "include": ["src", "./vite.config.ts"],
