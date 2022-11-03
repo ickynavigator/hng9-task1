@@ -67,7 +67,7 @@ export const Contact: React.FC = () => {
               {...form.getInputProps('TOS')}
             />
           </Stack>
-          <Button fullWidth type="submit" radius={'md'} id="btn_submit">
+          <Button fullWidth type="submit" radius={'md'} id="btn__submit">
             Send Message
           </Button>
         </form>
