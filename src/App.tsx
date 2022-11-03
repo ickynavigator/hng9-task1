@@ -17,7 +17,11 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;

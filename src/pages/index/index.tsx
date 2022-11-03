@@ -9,7 +9,7 @@ import { constantLinks, githubLink, name, slackName, twitter } from '../../info'
 
 const Index: React.FC = () => {
   return (
-    <div className="App">
+    <>
       <div className="profile">
         <div className="profile__wrapper">
           <div />
@@ -42,7 +42,7 @@ const Index: React.FC = () => {
         <span>HNG Internship 9 Frontend Task</span>
         <img src={i4g} />
       </div>
-    </div>
+    </>
   );
 };
 
