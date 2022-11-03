@@ -2,7 +2,7 @@ import github from '@Assets/github.svg';
 import i4g from '@Assets/i4g.svg';
 import slack from '@Assets/slack.svg';
 import zuri from '@Assets/zuri.svg';
-import LinkButton from '@Comp/LinkButton';
+import { LinkButton, RouteButton } from '@Comp/LinkButton';
 import ProfilePhoto from '@Comp/ProfilePhoto';
 import ShareButton from '@Comp/ShareButton';
 import { constantLinks, githubLink, name, slackName, twitter } from '../../info';
@@ -25,6 +25,8 @@ const Index: React.FC = () => {
       {constantLinks.map(({ link, title, id }) => (
         <LinkButton key={id} id={id} title={title} url={link} />
       ))}
+
+      <RouteButton id="contact" title="Contact Me" url="contact" />
 
       <div className="social__icons">
         <img src={slack} />
