@@ -1,0 +1,9 @@
+.contact {
+  width: 60%;
+  align-items: flex-start;
+
+  // desktop only
+  @media (min-width: 768px) {
+    margin-top: 8rem;
+  }
+}
