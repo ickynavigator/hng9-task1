@@ -13,6 +13,13 @@ export const Contact: React.FC = () => {
       message: '',
       TOS: false,
     },
+
+    validate: {
+      firstName: (value) => (value.length < 2 ? 'Name must have at least 2 letters' : null),
+      lastName: (value) => (value.length < 2 ? 'Name must have at least 2 letters' : null),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+      message: (value) => (value.length < 1 ? 'Please enter a message' : null),
+    },
   });
 
   return (
@@ -23,10 +30,29 @@ export const Contact: React.FC = () => {
           <Text>Hi there, contact me to ask me about anything you have in mind.</Text>
           <Stack my={'md'}>
             <Group grow>
-              <TextInput id="first_name" label="First Name" placeholder="Enter your first name" radius="md" />
-              <TextInput id="last_name" label="Last Name" placeholder="Enter your last name" radius="md" />
+              <TextInput
+                id="first_name"
+                label="First Name"
+                placeholder="Enter your first name"
+                radius="md"
+                {...form.getInputProps('firstName')}
+              />
+              <TextInput
+                id="last_name"
+                label="Last Name"
+                placeholder="Enter your last name"
+                radius="md"
+                {...form.getInputProps('lastName')}
+              />
             </Group>
-            <TextInput id="email" label="Email" placeholder="yourname@email.com" radius="md" type="email" />
+            <TextInput
+              id="email"
+              label="Email"
+              placeholder="yourname@email.com"
+              radius="md"
+              type="email"
+              {...form.getInputProps('email')}
+            />
             <Textarea
               id="message"
               label="Message"
@@ -34,8 +60,12 @@ export const Contact: React.FC = () => {
               minRows={4}
               maxRows={4}
               radius="md"
+              {...form.getInputProps('message')}
             />
-            <Checkbox label={`You agree to providing your data to ${name} who may contact you.`} />
+            <Checkbox
+              label={`You agree to providing your data to ${name} who may contact you.`}
+              {...form.getInputProps('TOS')}
+            />
           </Stack>
           <Button fullWidth type="submit" radius={'md'} id="btn_submit">
             Send Message
