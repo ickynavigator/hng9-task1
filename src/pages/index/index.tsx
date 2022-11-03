@@ -1,11 +1,11 @@
 import github from '@Assets/github.svg';
-import i4g from '@Assets/i4g.svg';
 import slack from '@Assets/slack.svg';
-import zuri from '@Assets/zuri.svg';
+import Footer from '@Comp/Footer';
 import { LinkButton, RouteButton } from '@Comp/LinkButton';
 import ProfilePhoto from '@Comp/ProfilePhoto';
 import ShareButton from '@Comp/ShareButton';
-import { constantLinks, githubLink, name, slackName, twitter } from '../../info';
+import { githubLink } from 'src/info';
+import { constantLinks, name, slackName, twitter } from '../../info';
 
 const Index: React.FC = () => {
   return (
@@ -35,13 +35,7 @@ const Index: React.FC = () => {
         </a>
       </div>
 
-      <hr />
-
-      <div className="footer">
-        <img src={zuri} />
-        <span>HNG Internship 9 Frontend Task</span>
-        <img src={i4g} />
-      </div>
+      <Footer />
     </>
   );
 };
